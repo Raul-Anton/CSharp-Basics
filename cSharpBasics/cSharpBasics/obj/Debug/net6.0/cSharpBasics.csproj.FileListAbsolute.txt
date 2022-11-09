@@ -1,0 +1,15 @@
+E:\Amdaris\C#_Basics\cSharpBasics\cSharpBasics\bin\Debug\net6.0\cSharpBasics.exe
+E:\Amdaris\C#_Basics\cSharpBasics\cSharpBasics\bin\Debug\net6.0\cSharpBasics.deps.json
+E:\Amdaris\C#_Basics\cSharpBasics\cSharpBasics\bin\Debug\net6.0\cSharpBasics.runtimeconfig.json
+E:\Amdaris\C#_Basics\cSharpBasics\cSharpBasics\bin\Debug\net6.0\cSharpBasics.dll
+E:\Amdaris\C#_Basics\cSharpBasics\cSharpBasics\bin\Debug\net6.0\cSharpBasics.pdb
+E:\Amdaris\C#_Basics\cSharpBasics\cSharpBasics\obj\Debug\net6.0\cSharpBasics.csproj.AssemblyReference.cache
+E:\Amdaris\C#_Basics\cSharpBasics\cSharpBasics\obj\Debug\net6.0\cSharpBasics.GeneratedMSBuildEditorConfig.editorconfig
+E:\Amdaris\C#_Basics\cSharpBasics\cSharpBasics\obj\Debug\net6.0\cSharpBasics.AssemblyInfoInputs.cache
+E:\Amdaris\C#_Basics\cSharpBasics\cSharpBasics\obj\Debug\net6.0\cSharpBasics.AssemblyInfo.cs
+E:\Amdaris\C#_Basics\cSharpBasics\cSharpBasics\obj\Debug\net6.0\cSharpBasics.csproj.CoreCompileInputs.cache
+E:\Amdaris\C#_Basics\cSharpBasics\cSharpBasics\obj\Debug\net6.0\cSharpBasics.dll
+E:\Amdaris\C#_Basics\cSharpBasics\cSharpBasics\obj\Debug\net6.0\refint\cSharpBasics.dll
+E:\Amdaris\C#_Basics\cSharpBasics\cSharpBasics\obj\Debug\net6.0\cSharpBasics.pdb
+E:\Amdaris\C#_Basics\cSharpBasics\cSharpBasics\obj\Debug\net6.0\cSharpBasics.genruntimeconfig.cache
+E:\Amdaris\C#_Basics\cSharpBasics\cSharpBasics\obj\Debug\net6.0\ref\cSharpBasics.dll
