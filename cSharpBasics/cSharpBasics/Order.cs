@@ -8,9 +8,14 @@ namespace cSharpBasics
 {
     internal class Order
     {
-        private int orderId { get; set; }
-        private int customerId { get; set; }
-        private string status { get; set; }
+        private int OrderId { get; set; }
+
+        private int CustomerId { get; set; }
+
+        private string Status { get; set; }
+
+        private Tea[] Teas { get; set; }
+
 
         public void GetStatus()
         {

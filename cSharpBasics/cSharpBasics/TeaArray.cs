@@ -8,18 +8,18 @@ using System.Threading.Tasks;
 
 namespace cSharpBasics
 {
-    internal class ItemArray : IEnumerable<Item>
+    internal class TeaArray : IEnumerable<Tea>
     {
-        private List<Item> _ItemArray = new List<Item>();
+        private List<Tea> TeaArr = new List<Tea>();
 
-        public void Add(Item item)
+        public void Add(Tea tea)
         {
-            _ItemArray.Add(item);
+            TeaArr.Add(tea);
         }
 
-        public IEnumerator<Item> GetEnumerator()
+        public IEnumerator<Tea> GetEnumerator()
         {
-            return _ItemArray.GetEnumerator();
+            return TeaArr.GetEnumerator();
         }
 
         IEnumerator IEnumerable.GetEnumerator()
@@ -27,7 +27,7 @@ namespace cSharpBasics
             return GetEnumerator();
         }
 
-        public Item this[int idx] => _ItemArray[idx];
-        public int Count => _ItemArray.Count;
+        public Tea this[int idx] => TeaArr[idx];
+        public int Count => TeaArr.Count;
     }
 }

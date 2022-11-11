@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace cSharpBasics
 {
-    internal class WhiteTea : Item, ICloneable
+    internal class WhiteTea : Tea, ICloneable
     {
         public WhiteTea()
         {
-
+            WhiteTea.Quantity++;
         }
 
         private WhiteTea whiteTea;
@@ -19,6 +19,7 @@ namespace cSharpBasics
         public WhiteTea(WhiteTea whiteTea)
         {
             this.whiteTea = whiteTea;
+            WhiteTea.Quantity++;
         }
 
         public object Clone()

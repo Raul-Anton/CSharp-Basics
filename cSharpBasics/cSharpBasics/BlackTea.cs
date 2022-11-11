@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace cSharpBasics
 {
-    internal class BlackTea : Item
+    internal class BlackTea : Tea
     {
-        public override void Bitterness()
+        public BlackTea()
         {
-            Console.WriteLine("This is quite bitter");
+            BlackTea.Quantity++;
         }
 
         public override void CheckStock()

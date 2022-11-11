@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Amdaris\\C#_Basics\\cSharpBasics\\cSharpBasics\\cSharpBasics.csproj",
+      "projectUniqueName": "E:\\Amdaris\\C#_Basics\\CSharp-Basics\\cSharpBasics\\cSharpBasics\\cSharpBasics.csproj",
       "projectName": "cSharpBasics",
-      "projectPath": "E:\\Amdaris\\C#_Basics\\cSharpBasics\\cSharpBasics\\cSharpBasics.csproj",
+      "projectPath": "E:\\Amdaris\\C#_Basics\\CSharp-Basics\\cSharpBasics\\cSharpBasics\\cSharpBasics.csproj",
       "packagesPath": "C:\\Users\\Raul\\.nuget\\packages\\",
-      "outputPath": "E:\\Amdaris\\C#_Basics\\cSharpBasics\\cSharpBasics\\obj\\",
+      "outputPath": "E:\\Amdaris\\C#_Basics\\CSharp-Basics\\cSharpBasics\\cSharpBasics\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Raul\\AppData\\Roaming\\NuGet\\NuGet.Config",

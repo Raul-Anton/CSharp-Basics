@@ -9,10 +9,10 @@ namespace cSharpBasics
 {
     internal class Customer
     {
-        private int customerId { get; set; }
-        private string customerName { get; set; }
-        private string emailAddress { get; set; }
-        private string password { get; set; }
+        private int CustomerId { get; set; }
+        private string CustomerName { get; set; }
+        private string EmailAddress { get; set; }
+        private string Password { get; set; }
 
         public void Register()
         {

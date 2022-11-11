@@ -1,12 +1,6 @@
 ﻿using cSharpBasics;
-
 BlackTea blackTea = new BlackTea();
-
 GreenTea greenTea = new GreenTea();
-
-blackTea.Bitterness();
-greenTea.Bitterness();
-
 
 
 Console.WriteLine();
@@ -31,8 +25,6 @@ Console.WriteLine();
 
 WhiteTea whiteTea = new WhiteTea();
 
-whiteTea.Bitterness();
-
 WhiteTea.Quantity = 2;
 whiteTea.CheckStock();
 
@@ -41,13 +33,13 @@ whiteTea.CheckStock();
 // IEnumerable
 Console.WriteLine();
 
-ItemArray itemArray = new ItemArray();
+TeaArray teaArray = new TeaArray();
 
-itemArray.Add(blackTea);
-itemArray.Add(greenTea);
-itemArray.Add(whiteTea);
+teaArray.Add(blackTea);
+teaArray.Add(greenTea);
+teaArray.Add(whiteTea);
 
-foreach (var item in itemArray)
+foreach (var item in teaArray)
     Console.WriteLine(item);
 
 

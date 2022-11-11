@@ -7,34 +7,34 @@ using System.Threading.Tasks;
 
 namespace cSharpBasics
 {
-    internal abstract class Item
+    internal abstract class Tea
     {
-        private int itemId;
-        private string itemName;
-        private float price;
-        private static int quantity;
+        private int _teaId;
+        private string _teaName;
+        private float _price;
+        private static int _quantity;
 
-        public int ItemId
+        public int TeaId
         {
             get
             {
-                return itemId;
+                return _teaId;
             }
             set
             {
-                itemId = value;
+                _teaId = value;
             }
         }
 
-        public string ItemName
+        public string TeaName
         {
             get
             {
-                return itemName;
+                return _teaName;
             }
             set
             {
-                itemName = value;
+                _teaName = value;
             }
         }
 
@@ -42,11 +42,11 @@ namespace cSharpBasics
         {
             get
             {
-                return Price;
+                return _price;
             }
             set
             {
-                Price = value;
+                _price = value;
             }
         }
 
@@ -54,34 +54,29 @@ namespace cSharpBasics
         {
             get
             {
-                return quantity;
+                return _quantity;
             }
             set
             {
-                quantity = value;
+                _quantity = value;
             }
         }
 
         public virtual void CheckStock()
         {
-            Console.WriteLine("We have {0} products in store",quantity);
+            Console.WriteLine("We have {0} tea products in store",_quantity);
         }
 
         public virtual void CheckStock(int number)
         {
-            if (quantity < number)
+            if (_quantity < number)
             {
                 Console.WriteLine("Not enough products available!");
             }
             else
             {
                 Console.WriteLine("Enough products available!");
-            }    
-        }
-
-        public virtual void Bitterness()
-        {
-            Console.WriteLine("Which kind of tea are we talking about again?");
+            }
         }
     }
 }

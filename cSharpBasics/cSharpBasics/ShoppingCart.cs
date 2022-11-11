@@ -8,10 +8,14 @@ namespace cSharpBasics
 {
     internal class ShoppingCart
     {
-        private int cartId { get; set; }
-        private int[] productIds = new int[int.MaxValue];
-        private int[] quantities = new int[int.MaxValue];
-        private float totalPrice { get; set; }
+        private int CartId { get; set; }
+
+        private Tea[] Teas { get; set; }
+
+        private int[] Quantities { get; set; }
+
+        private float TotalPrice { get; set; }
+
 
         public void AddCartDetails()
         {
