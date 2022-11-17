@@ -14,6 +14,14 @@ namespace cSharpBasics
         private string EmailAddress { get; set; }
         private string Password { get; set; }
 
+        public Customer(int customerId, string customerName, string emailAddress, string password)
+        {
+            CustomerId = customerId;
+            CustomerName = customerName;
+            EmailAddress = emailAddress;
+            Password = password;
+        }
+
         public void Register()
         {
 
@@ -22,6 +30,11 @@ namespace cSharpBasics
         public void Login()
         {
 
+        }
+
+        public override string ToString()
+        {
+            return $"CustomerId: {CustomerId}, CustomerName: {CustomerName}, EmailAddress: {EmailAddress}, Password: {Password}";
         }
     }
 }

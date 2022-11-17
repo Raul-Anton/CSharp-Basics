@@ -1,54 +1,15 @@
 ﻿using cSharpBasics;
-BlackTea blackTea = new BlackTea();
-GreenTea greenTea = new GreenTea();
+using cSharpBasics.ReadWriteEncryptCompress;
 
+Customer customer = new Customer(1, "Anton Raul", "raul.anton1999@gmail.com", "okeymage");
 
-Console.WriteLine();
+string path = @"E:\Amdaris\C#_Basics\CSharp-Basics\Customer.txt";
 
-BlackTea.Quantity = 9;
+ReadWriteEncryptCompress rwec = new ReadWriteEncryptCompress(path);
 
-blackTea.CheckStock();
-blackTea.CheckStock(10);
+rwec.WriteFile(customer.ToString());
 
+rwec.AddEncryption(path);
 
-
-Console.WriteLine();
-
-GreenTea.Quantity = 11;
-
-greenTea.CheckStock();
-greenTea.CheckStock(10);
-
-
-
-Console.WriteLine();
-
-WhiteTea whiteTea = new WhiteTea();
-
-WhiteTea.Quantity = 2;
-whiteTea.CheckStock();
-
-
-
-// IEnumerable
-Console.WriteLine();
-
-TeaArray teaArray = new TeaArray();
-
-teaArray.Add(blackTea);
-teaArray.Add(greenTea);
-teaArray.Add(whiteTea);
-
-foreach (var item in teaArray)
-    Console.WriteLine(item);
-
-
-//IClonable
-Console.WriteLine();
-
-WhiteTea? firstTea = whiteTea.Clone() as WhiteTea;
-
-Console.WriteLine(firstTea);
-
-
+//rwec.RemoveEncryption(path);
 
