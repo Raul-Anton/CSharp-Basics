@@ -10,13 +10,13 @@ namespace cSharpBasics.ReadWriteEncryptCompress
 {
     internal class ReadWriteEncryptCompress
     {
-        private string Path = @"E:\Amdaris\C#_Basics\CSharp-Basics\Customer.txt";
+        private string Path;
 
-        private string OriginalFileName = "E:\\Amdaris\\C#_Basics\\CSharp-Basics\\Customer.txt";
+        private string OriginalFileName;
 
-        private string CompressedFileName = "E:\\Amdaris\\C#_Basics\\CSharp-Basics\\CompressedCustomer.gz";
+        private string CompressedFileName;
 
-        private string DecompressedFileName = "E:\\Amdaris\\C#_Basics\\CSharp-Basics\\DecompressedCustomer.txt";
+        private string DecompressedFileName;
 
         public ReadWriteEncryptCompress(string path, string originalFileName, string compressedFileName, string decompressedFileName)
         {
