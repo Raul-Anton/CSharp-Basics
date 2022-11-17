@@ -3,21 +3,31 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO.Compression;
+using System.Globalization;
 
 namespace cSharpBasics.ReadWriteEncryptCompress
 {
     internal class ReadWriteEncryptCompress
     {
-        public string path { get; set; }
+        private string Path = @"E:\Amdaris\C#_Basics\CSharp-Basics\Customer.txt";
 
-        public ReadWriteEncryptCompress(string path)
+        private string OriginalFileName = "E:\\Amdaris\\C#_Basics\\CSharp-Basics\\Customer.txt";
+
+        private string CompressedFileName = "E:\\Amdaris\\C#_Basics\\CSharp-Basics\\CompressedCustomer.gz";
+
+        private string DecompressedFileName = "E:\\Amdaris\\C#_Basics\\CSharp-Basics\\DecompressedCustomer.txt";
+
+        public ReadWriteEncryptCompress(string path, string originalFileName, string compressedFileName, string decompressedFileName)
         {
-            this.path = path;
+            Path= path;
+            OriginalFileName= originalFileName;
+            CompressedFileName= compressedFileName;
+            DecompressedFileName= decompressedFileName;
         }
 
-
         // write File
-        public void WriteFile(string s)
+        private void WriteFile(string s, string path)
         {
             byte[] bytes = Encoding.UTF8.GetBytes(s);
 
@@ -27,9 +37,17 @@ namespace cSharpBasics.ReadWriteEncryptCompress
             }
         }
 
+        //read File
+        private string ReadFile(string path)
+        {
+            string readFile = File.ReadAllText(path);
+
+            return readFile;
+        }
+
 
         // Enrypt & Decrypt File
-        public void EncryptFile(string path)
+        private void EncryptFile(string path)
         {
             try
             {
@@ -41,7 +59,7 @@ namespace cSharpBasics.ReadWriteEncryptCompress
             }
         }
 
-        public void DecryptFile(string path)
+        private void DecryptFile(string path)
         {
             try
             {
@@ -53,7 +71,7 @@ namespace cSharpBasics.ReadWriteEncryptCompress
             }
         }
 
-        public void AddEncryption(string path)
+        private void AddEncryption(string path)
         {
             try
             {
@@ -65,7 +83,7 @@ namespace cSharpBasics.ReadWriteEncryptCompress
             }
         }
 
-        public void RemoveEncryption(string path)
+        private void RemoveEncryption(string path)
         {
             try
             {
@@ -77,8 +95,37 @@ namespace cSharpBasics.ReadWriteEncryptCompress
             }
         }
 
+
         // Compress & Decompress File
 
-        
+        private void CompressFile(string originalFileName, string compressedFileName)
+        {
+            using FileStream originalFileStream = File.Open(originalFileName, FileMode.Open);
+            using FileStream compressedFileStream = File.Create(compressedFileName);
+            using var compressor = new GZipStream(compressedFileStream, CompressionMode.Compress);
+            originalFileStream.CopyTo(compressor);
+        }
+
+        private void DecompressFile(string compressedFileName, string decompressedFileName)
+        {
+            using FileStream compressedFileStream = File.Open(compressedFileName, FileMode.Open);
+            using FileStream outputFileStream = File.Create(decompressedFileName);
+            using var decompressor = new GZipStream(compressedFileStream, CompressionMode.Decompress);
+            decompressor.CopyTo(outputFileStream);
+        }
+
+        public void Write_Encrypt_Compress_File(string s)
+        {
+            WriteFile(s, Path);
+            EncryptFile(Path);
+            CompressFile(OriginalFileName, CompressedFileName);
+        }
+
+        public string Decompress_Decrypt_Read_File()
+        {
+            DecompressFile(CompressedFileName,DecompressedFileName);
+            DecryptFile(DecompressedFileName);
+            return ReadFile(DecompressedFileName);
+        }
     }
 }
